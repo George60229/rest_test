@@ -7,7 +7,7 @@ public interface EntityDAO<E> {
 
     public void setDataSource(DataSource ds);
 
-    public E getEntityById(Integer id);
+    public E getEntityByName(String name);
 
 
     public List<E> listCertificates();

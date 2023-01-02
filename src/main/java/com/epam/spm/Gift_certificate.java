@@ -2,7 +2,7 @@ package com.epam.spm;
 
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
+import java.sql.Date;
 
 
 @Component("giftCertificate")
@@ -10,16 +10,14 @@ public class Gift_certificate {
 
 
     private Integer certificate_id;
-
-
     private String name;
     private String description;
     private int price;
     private int duration;
 
-    private LocalDateTime create_date;
+    private Date create_date;
 
-    private LocalDateTime last_update_date;
+    private Date last_update_date;
 
 
     public Integer getId() {
@@ -62,19 +60,19 @@ public class Gift_certificate {
         this.duration = duration;
     }
 
-    public LocalDateTime getCreate_date() {
+    public Date getCreate_date() {
         return create_date;
     }
 
-    public void setCreate_date(LocalDateTime create_date) {
+    public void setCreate_date(Date create_date) {
         this.create_date = create_date;
     }
 
-    public LocalDateTime getLast_update_date() {
+    public Date getLast_update_date() {
         return last_update_date;
     }
 
-    public void setLast_update_date(LocalDateTime last_update_date) {
+    public void setLast_update_date(Date last_update_date) {
         this.last_update_date = last_update_date;
     }
 }

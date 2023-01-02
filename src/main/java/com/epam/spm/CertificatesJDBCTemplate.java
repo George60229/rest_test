@@ -16,11 +16,10 @@ public class CertificatesJDBCTemplate extends AbstractJDBCTemplate implements En
     }
 
     @Override
-    public Gift_certificate getEntityById(Integer id) {
-        String SQL = "select name,price from certificates where certificate_id="+id;
-        Gift_certificate certificate=new Gift_certificate();
-        //todo
-        return certificate;
+    public Gift_certificate getEntityByName(String name) {
+        String SQL = "select * from certificates where name='" + name+"'";
+        List<Gift_certificate> result= jdbcTemplateObject.query(SQL, new GiftMapper());
+        return result.get(0);
     }
 
     @Override
